@@ -54,11 +54,11 @@
     }
   }
 
-  .getstarted-page__backbtn {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: #ffa927;
-    cursor: pointer;
-  }
+}
+.getstarted-page__backbtn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  color: #ffa927;
+  cursor: pointer;
 }

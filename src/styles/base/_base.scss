@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.2;
+}
+
+ul:not([class]), 
+ol:not([class]) {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+svg,
+video,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  color: $clr-neutral-900;
+  font-family: $ff-sans;
+  font-size: $fs-400;
+}
+
+.container {
+  $padding: 1.2rem;
+  $max-width: min(1024px, 100% - $padding);
+
+  width: $max-width;
+  padding: $padding;
+  margin-inline: auto;
+}

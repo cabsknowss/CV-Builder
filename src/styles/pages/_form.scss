@@ -20,12 +20,12 @@
   background-color: $clr-neutral-100;
   border: 0.5px solid $clr-neutral-400;
   border-top: 0;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .form-header {
   background-color: #008272;
-  height: 150px;
+  height: 120px;
   width: 100%;
   padding: 2rem;
 
@@ -58,17 +58,38 @@ input {
 
 .form-inputs__category {
   font-weight: $fw-semi-bold;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   font-size: 2rem;
 }
 
 .form-inputs__sections {
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.form-inputs__buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .form-inputs__nextbtn {
-  padding: 0.3rem 5rem;
+  padding: 0.5rem 5rem;
   background-color: #008272;
   color: $clr-neutral-100;
   border: 0;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.form-inputs__addbtn {
+  padding: 0.5rem 2rem;
+  background-color: #008272;
+  color: $clr-neutral-100;
+  border: 0;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.form-inputs__nextbtn:hover,
+.form-inputs__addbtn:hover {
+  opacity: 0.80;
 }

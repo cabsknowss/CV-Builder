@@ -4,8 +4,8 @@
   overflow-y: hidden;
   background-image: linear-gradient(
     160deg, 
-    $clr-accent-700 50%,
-    rgba(255, 164, 27, 0.95) 50%
+    $clr-neutral-700 50%,
+    $clr-neutral-400 50%
   );
 
   display: grid;
@@ -62,9 +62,9 @@
     .home-page__btn {
       padding: 1rem 3rem;
       border: 0;
-      color: $clr-neutral-900;
+      color: $clr-neutral-100;
       font-weight: $fw-semi-bold;
-      background-color: #f7e5b6;
+      background-color: $clr-neutral-600;
       border-radius: 8px;
       box-shadow: 1px 1px 10px 2px $clr-neutral-900;
       cursor: pointer;

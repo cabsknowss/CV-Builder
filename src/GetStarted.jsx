@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowBack } from "@mui/icons-material";
 import CvExample from "./assets/img/cv-example.jpg";
 import CvExample2 from "./assets/img/cv-example2.jpg";
-import ProfessionalForm from "./components/ProfessionalForm";
-import CreativeForm from "./components/CreativeForm";
+import Form from "./components/Form";
 
 const GetStarted = () => {
   const navigate = useNavigate();
@@ -42,10 +41,7 @@ const GetStarted = () => {
         </div>
       </div>
 
-      {template === "Professional" && (
-        <ProfessionalForm setTemplate={setTemplate} />
-      )}
-      {template === "Creative" && <CreativeForm />}
+      {template && <Form template={template} setTemplate={setTemplate} />}
     </>
   );
 };

@@ -5,8 +5,8 @@
 
   background-image: linear-gradient(
     160deg, 
-    $clr-accent-700 50%,
-    rgba(255, 164, 27, 0.95) 50%
+    $clr-neutral-700 50%,
+    $clr-neutral-400 50%
   );
 
   display: flex;
@@ -59,6 +59,6 @@
   position: fixed;
   top: 1rem;
   left: 1rem;
-  color: #ffa927;
+  color: $clr-neutral-500;
   cursor: pointer;
 }

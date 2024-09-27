@@ -2,14 +2,14 @@ import { useState } from "react";
 
 const GeneralForm = ({ setGeneralForm, setForm }) => {
   const [name, setName] = useState("");
-  const [address, setAddress] = useState("");
+  const [profession, setProfession] = useState("");
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
 
   const handleNextButton = (e) => {
     e.preventDefault();
-    setGeneralForm({ name, address, number, email, website });
+    setGeneralForm({ name, profession, number, email, website });
     setForm("EducationForm");
   };
 
@@ -31,14 +31,14 @@ const GeneralForm = ({ setGeneralForm, setForm }) => {
         </div>
 
         <div className="form-inputs__sections">
-          <label htmlFor="address">
-            2. Present Address<span className="required-fields">*</span>
+          <label htmlFor="profession">
+            2. Profession<span className="required-fields">*</span>
           </label>
           <input
-            onChange={(event) => setAddress(event.target.value)}
-            value={address}
+            onChange={(event) => setProfession(event.target.value)}
+            value={profession}
             type="text"
-            placeholder="Enter your address."
+            placeholder="Enter your profession."
             required
           />
         </div>

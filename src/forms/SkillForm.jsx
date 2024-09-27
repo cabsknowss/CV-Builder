@@ -15,7 +15,7 @@ const SkillInfo = ({ setSkillForm, setForm }) => {
     if (!skills) return;
     e.preventDefault();
     setSkillForm(skills);
-    setForm("");
+    setForm("GeneratePage");
   };
   return (
     <div>

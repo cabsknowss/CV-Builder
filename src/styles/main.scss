@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 // base
-@import "./base/variables.scss";
-@import "./base/base.scss";
+@import "./base/variables";
+@import "./base/base";
 
 // pages
-@import "./pages/home.scss";
-@import "./pages/getstarted.scss";
-@import "./pages/form.scss"
+@import "./pages/home";
+@import "./pages/getstarted";
+@import "./pages/form";
+@import "./pages/professionalcv"

@@ -1,9 +1,20 @@
 import React, { useEffect } from "react";
+import generatePDF, { Resolution, Margin } from "react-to-pdf";
 
 const ProfessionalCv = ({ personalDetails }) => {
   useEffect(() => {
     console.log(personalDetails);
   });
+
+  const options = {
+    method: "open",
+    resolution: Resolution.HIGH,
+    page: {
+      margin: Margin.SMALL,
+      format: "letter",
+    },
+  };
+  const getTargetElement = () => document.getElementById("content-id");
 
   const dateFormatter = (input) => {
     const months = [
@@ -27,7 +38,7 @@ const ProfessionalCv = ({ personalDetails }) => {
 
   return (
     <div className="cv-page">
-      <div className="cv-page__container">
+      <div className="cv-page__container" id="content-id">
         <section>
           <div className="general-information">
             <div>
@@ -108,6 +119,15 @@ const ProfessionalCv = ({ personalDetails }) => {
             </ul>
           </div>
         </section>
+      </div>
+
+      <div className="CV__generate-pdf">
+        <button
+          type="generate"
+          onClick={() => generatePDF(getTargetElement, options)}
+        >
+          Generate PDF
+        </button>
       </div>
     </div>
   );

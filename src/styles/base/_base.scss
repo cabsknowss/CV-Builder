@@ -134,3 +134,15 @@ button[type="add"] {
     padding: 1rem 2rem;
   }
 }
+
+button[type="generate"] {
+  padding: 0.7rem 1.2rem;
+  border: 0.5px solid rgba($color: #696969, $alpha: 0.3);
+  border-radius: 8px;
+  box-shadow: 0px 0px 0px 0px $clr-neutral-800;
+  background-color: $clr-neutral-200;
+
+  @media (min-width: $mobile-screen) {
+    padding: 1rem 2rem;
+  }
+}

@@ -19,7 +19,12 @@ const SkillInfo = ({ setSkillForm, setForm }) => {
   };
   return (
     <div>
-      <h3 className="form-inputs__category">Skills</h3>
+      <div className="form-inputs__title">
+        <h3>Skills</h3>
+        <button onClick={handleAddButton} type="add">
+          Add
+        </button>
+      </div>
       <form action="" onSubmit={handleAddButton}>
         <div className="form-inputs__sections">
           <ul>
@@ -38,15 +43,12 @@ const SkillInfo = ({ setSkillForm, setForm }) => {
             placeholder="Enter your answer"
           />
         </div>
-
-        <div className="form-inputs__buttons">
-          <button className="form-inputs__nextbtn">Add Another</button>
-
-          <button onClick={handleSubmitButton} className="form-inputs__nextbtn">
-            Submit
-          </button>
-        </div>
       </form>
+      <div>
+        <button type="next" onClick={handleSubmitButton}>
+          Submit
+        </button>
+      </div>
     </div>
   );
 };

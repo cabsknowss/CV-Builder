@@ -30,10 +30,12 @@ const WorkForm = ({ workForm, setWorkForm, setForm }) => {
   };
   return (
     <div>
-      <div className="form-inputs__title-add">
-        <h3 className="form-inputs__category">Work Experience {workNum}</h3>
-        <button className="form-inputs__addbtn" onClick={handleAddButton}>
-          Add another
+      <div className="form-inputs__title">
+        <h3>
+          Experience <span style={{ fontSize: "1rem" }}>({workNum})</span>
+        </h3>
+        <button type="add" onClick={handleAddButton}>
+          Add
         </button>
       </div>
       <form action="" onSubmit={handleNextButton}>
@@ -101,8 +103,8 @@ const WorkForm = ({ workForm, setWorkForm, setForm }) => {
           />
         </div>
 
-        <div className="form-inputs__buttons">
-          <button className="form-inputs__nextbtn">Next</button>
+        <div>
+          <button type="next">Next</button>
         </div>
       </form>
     </div>

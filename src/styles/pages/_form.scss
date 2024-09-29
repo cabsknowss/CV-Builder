@@ -5,35 +5,35 @@
   top: 0;
   left: 0;
   z-index: 99;
-  // overflow: hidden;
 
-  background-color: #e9f2f4;
+  background-color: #ebebeb;
 
   .form-container {
     $max-width: 700px;
-    $padding: 1rem;
-  
+
     height: 100dvh;
-    width: min($max-width, 100% - $padding);
+    width: min($max-width, 100%);
     margin-inline: auto;
+
     background-color: $clr-neutral-100;
     border: 0.5px solid $clr-neutral-400;
     border-top: 0;
   }
-  
+
   .form-header {
-    background-color: #1e1e1e;
     height: 120px;
     width: 100%;
-    padding: 2rem;
-  
+    padding: 2rem 0 2rem 3rem;
+
+    background-color: $clr-neutral-700;
+
     h2 {
       color: $clr-neutral-100;
       font-size: 2rem;
       padding-bottom: 1rem;
       font-weight: lighter;
     }
-  
+
     p {
       color: $clr-neutral-100;
       font-size: 0.8rem;
@@ -42,56 +42,25 @@
   }
 }
 
-
-input {
-  width: 100%;
-  display: block;
-  margin-block: 0.8rem;
-  padding: 6px;
-  font-size: 0.8rem;
-}
-
-textarea {
-  width: 100%;
-  display: block;
-  margin-block: 0.8rem;
-  padding: 6px;
-  font-size: 0.8rem;
-  resize: none;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 .form-inputs {
   padding: 2rem 3rem;
 
-  .form-inputs__category {
-    font-weight: $fw-semi-bold;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    
-  }
-
-  .form-inputs__title-add {
+  .form-inputs__title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
 
-    .form-inputs__addbtn {
-      padding: 0.5rem 2rem;
-      background-color: #008272;
-      color: $clr-neutral-100;
-      border: 0;
-      font-size: 0.8rem;
-      cursor: pointer;
-      margin-bottom: 1rem;
+    h3 {
+      font-weight: $fw-semi-bold;
+      font-size: 1.5rem;
+
+      @media (min-width: $mobile-screen) {
+        font-size: 2rem;
+      }
     }
   }
-  
+
   .form-inputs__sections {
     padding-bottom: 0.5rem;
 
@@ -101,39 +70,6 @@ input::-webkit-inner-spin-button {
 
     .form-inputs__lists {
       margin-left: 2rem;
-    }
-  }
-
-  .form-inputs__buttons {
-    display: flex;
-    justify-content: space-between;
-
-
-    .form-inputs__nextbtn {
-      padding: 0.5rem 5rem;
-      background-color: #008272;
-      color: $clr-neutral-100;
-      border: 0;
-      font-size: 0.8rem;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-
-    .form-inputs__backbtn {
-      padding: 0.5rem 5rem;
-      background-color: $clr-neutral-500;
-      color: $clr-neutral-100;
-      border: 0;
-      font-size: 0.8rem;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-    
-    
-    .form-inputs__nextbtn:hover,
-    .form-inputs__backbtn:hover,
-    .form-inputs__addbtn:hover {
-      opacity: 0.80;
     }
   }
 }

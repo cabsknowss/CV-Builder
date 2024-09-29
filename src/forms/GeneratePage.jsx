@@ -2,8 +2,8 @@ import React from "react";
 
 const GeneratePage = ({ submitForms }) => {
   return (
-    <div className="generate-page">
-      <button className="generate-page__btn" onClick={submitForms}>
+    <div style={generalPageStyle} className="generate-page">
+      <button type="next" onClick={submitForms}>
         generate
       </button>
     </div>
@@ -11,3 +11,9 @@ const GeneratePage = ({ submitForms }) => {
 };
 
 export default GeneratePage;
+
+const generalPageStyle = {
+  display: "flex",
+  justifyContent: "center",
+  marginTop: "2rem",
+};

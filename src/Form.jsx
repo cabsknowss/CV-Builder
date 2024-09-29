@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { ArrowBack } from "@mui/icons-material";
-import GeneralForm from "../forms/GeneralForm";
-import EducationForm from "../forms/EducationForm";
-import WorkForm from "../forms/WorkForm";
-import SkillForm from "../forms/SkillForm";
-import GeneratePage from "../forms/GeneratePage";
-import ProfessionalCv from "../cv/ProfessionalCv";
+import GeneralForm from "./forms/GeneralForm";
+import EducationForm from "./forms/EducationForm";
+import WorkForm from "./forms/WorkForm";
+import SkillForm from "./forms/SkillForm";
+import GeneratePage from "./forms/GeneratePage";
+import ProfessionalCv from "./cv/ProfessionalCv";
 
 const Form = ({ template, setTemplate }) => {
   const [form, setForm] = useState("GeneralForm");

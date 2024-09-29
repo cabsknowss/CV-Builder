@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowBack } from "@mui/icons-material";
 import CvExample from "./assets/img/cv-example.jpg";
 import CvExample2 from "./assets/img/cv-example2.jpg";
-import Form from "./components/Form";
+import Form from "./Form";
 
 const GetStarted = () => {
   const navigate = useNavigate();
@@ -18,6 +18,7 @@ const GetStarted = () => {
       img: CvExample2,
     },
   ];
+
   return (
     <>
       <div className="getstarted-page">
@@ -35,10 +36,10 @@ const GetStarted = () => {
             </div>
           ))}
         </section>
+      </div>
 
-        <div onClick={() => navigate("/")} className="getstarted-page__backbtn">
-          <ArrowBack />
-        </div>
+      <div onClick={() => navigate("/")} className="getstarted-page__backbtn">
+        <ArrowBack />
       </div>
 
       {template && <Form template={template} setTemplate={setTemplate} />}

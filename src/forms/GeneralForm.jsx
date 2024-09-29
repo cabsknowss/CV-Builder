@@ -15,7 +15,9 @@ const GeneralForm = ({ setGeneralForm, setForm }) => {
 
   return (
     <>
-      <h3 className="form-inputs__category">General Information</h3>
+      <div className="form-inputs__title">
+        <h3>General Information</h3>
+      </div>
       <form action="" onSubmit={handleNextButton}>
         <div className="form-inputs__sections">
           <label htmlFor="fullname">
@@ -82,8 +84,8 @@ const GeneralForm = ({ setGeneralForm, setForm }) => {
           />
         </div>
 
-        <div className="form-inputs__buttons">
-          <button className="form-inputs__nextbtn">Next</button>
+        <div>
+          <button type="next">Next</button>
         </div>
       </form>
     </>

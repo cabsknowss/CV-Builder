@@ -30,15 +30,16 @@ const EducationForm = ({ educationForm, setEducationForm, setForm }) => {
 
   return (
     <div>
+      <div className="form-inputs__title">
+        <h3>
+          Education <span style={{ fontSize: "1rem" }}>({educationNum})</span>
+        </h3>
+        <button type="add" onClick={handleAddButton}>
+          Add
+        </button>
+      </div>
+
       <form action="" onSubmit={handleNextButton}>
-        <div className="form-inputs__title-add">
-          <h3 className="form-inputs__category">
-            Educational Background {educationNum}
-          </h3>
-          <button className="form-inputs__addbtn" onClick={handleAddButton}>
-            Add another
-          </button>
-        </div>
         <div className="form-inputs__sections">
           <label htmlFor="course">
             1. Course Program<span className="required-fields">*</span>
@@ -92,7 +93,7 @@ const EducationForm = ({ educationForm, setEducationForm, setForm }) => {
         </div>
 
         <div className="form-inputs__buttons">
-          <button className="form-inputs__nextbtn">Next</button>
+          <button type="next">Next</button>
         </div>
       </form>
     </div>

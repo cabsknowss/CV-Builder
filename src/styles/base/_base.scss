@@ -23,7 +23,7 @@ body {
   line-height: 1.2;
 }
 
-ul[class], 
+ul[class],
 ol[class] {
   list-style: none;
 }
@@ -54,4 +54,83 @@ body {
   width: $max-width;
   padding: $padding;
   margin-inline: auto;
+}
+
+label {
+  font-size: 0.85rem;
+
+  @media (min-width: $mobile-screen) {
+    font-size: 0.95rem;
+  }
+}
+
+input {
+  width: 100%;
+  display: block;
+  margin-block: 0.8rem;
+  padding: 6px;
+  font-size: 0.8rem;
+
+  @media (min-width: $mobile-screen) {
+    font-size: 0.9;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  display: block;
+  margin-block: 0.8rem;
+  padding: 6px;
+  font-size: 0.8rem;
+  resize: none;
+}
+
+button {
+  padding: 1rem 3rem;
+  border: 0;
+  border-radius: 8px;
+
+  color: $clr-neutral-800;
+  font-weight: $fw-semi-bold;
+  background-color: $clr-neutral-300;
+  box-shadow: 1px 1px 10px 2px $clr-neutral-800;
+  font-size: 0.8rem;
+
+  cursor: pointer;
+  transition: opacity 0.2s ease-out;
+
+  @media (min-width: $mobile-screen) {
+    font-size: 0.9rem;
+  }
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button[type="next"] {
+  padding: 1rem 3.5rem;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 0px 0px $clr-neutral-800;
+  align-self: flex-end;
+}
+
+button[type="add"] {
+  padding: 0.7rem 1.2rem;
+  border: 0.5px solid rgba($color: #696969, $alpha: 0.3);
+  border-radius: 8px;
+  box-shadow: 0px 0px 0px 0px $clr-neutral-800;
+  background-color: $clr-neutral-200;
+
+  @media (min-width: $mobile-screen) {
+    padding: 1rem 2rem;
+  }
 }

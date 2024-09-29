@@ -5,6 +5,26 @@ const ProfessionalCv = ({ personalDetails }) => {
     console.log(personalDetails);
   });
 
+  const dateFormatter = (input) => {
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+
+    const dateSplit = input.split("-");
+    return `${months[parseInt(dateSplit[1]) - 1]} ${dateSplit[0]}`;
+  };
+
   return (
     <div className="cv-page">
       <div className="cv-page__container">
@@ -15,9 +35,17 @@ const ProfessionalCv = ({ personalDetails }) => {
               <h2>{personalDetails.profession}</h2>
             </div>
             <div>
-              <p>{personalDetails.email}</p>
-              <p>{personalDetails.number}</p>
-              <p>{personalDetails.website}</p>
+              <p>
+                <a href={`tel:${personalDetails.number}`}>
+                  {personalDetails.number}
+                </a>
+              </p>
+              <a href={`mailto:${personalDetails.email}`}>
+                <p>{personalDetails.email}</p>
+              </a>
+              <a href={personalDetails.website}>
+                <p>{personalDetails.website}</p>
+              </a>
             </div>
           </div>
         </section>
@@ -26,16 +54,17 @@ const ProfessionalCv = ({ personalDetails }) => {
 
         <section>
           <div className="work-information">
-            <h3>Experience</h3>
+            <h2>Experience</h2>
             <ul>
               {personalDetails.work.map((work, index) => (
                 <li key={index}>
                   <div className="work-information__title">
                     <h3>
-                      {work.company} | {work.position}
+                      {work.company} | <span>{work.position}</span>
                     </h3>
-                    <p>
-                      {work.startDate} - {work.endDate}
+                    <p className="work-information__date">
+                      {dateFormatter(work.startDate)} -{" "}
+                      {dateFormatter(work.endDate)}
                     </p>
                   </div>
                   <p>{work.description}</p>
@@ -49,12 +78,12 @@ const ProfessionalCv = ({ personalDetails }) => {
 
         <section>
           <div className="skill-information">
-            <h3>Skills</h3>
-            <div>
+            <h2>Skills</h2>
+            <ul className="skill-information__lists">
               {personalDetails.skill.map((skill, index) => (
-                <p key={index}>{skill}</p>
+                <li key={index}>{skill}</li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -62,18 +91,21 @@ const ProfessionalCv = ({ personalDetails }) => {
 
         <section>
           <div className="education-information">
-            <h3>Education</h3>
-            {personalDetails.education.map((education, index) => (
-              <div>
-                <div>
+            <h2>Education</h2>
+            <ul>
+              {personalDetails.education.map((education, index) => (
+                <li key={index}>
+                  <div className="education-information__title">
+                    <h3>{education.course}</h3>
+                    <p className="education-information__date">
+                      {dateFormatter(education.startDate)} -{" "}
+                      {dateFormatter(education.endDate)}
+                    </p>
+                  </div>
                   <p>{education.school}</p>
-                  <p>
-                    {education.startDate} - {education.endDate}
-                  </p>
-                </div>
-                <p>{education.course}</p>
-              </div>
-            ))}
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       </div>

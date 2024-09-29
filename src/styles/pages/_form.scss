@@ -77,18 +77,4 @@
 .generate-page {
   display: flex;
   justify-content: center;
-
-  .generate-page__btn {
-    padding: 0.5rem 5rem;
-    background-color: #008272;
-    color: $clr-neutral-100;
-    border: 0;
-    font-size: 0.8rem;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-
-  .generate-page__btn:hover {
-    opacity: 0.8;
-  }
 }

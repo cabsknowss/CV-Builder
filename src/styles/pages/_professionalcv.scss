@@ -25,6 +25,7 @@
   align-items: center;
 
   padding-bottom: 1rem;
+  margin-bottom: 1rem;
   border-bottom: 2px solid rgba(153, 153, 153, 0.5);
 
   h1 {
@@ -56,6 +57,8 @@
 // WORK INFORMATION
 .work-information {
   border-bottom: 2px solid rgba(153, 153, 153, 0.5);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 
   ul {
     margin-left: 2rem;
@@ -100,10 +103,42 @@
   }
 }
 
+// PROJECT INFORMATION
+.project-information {
+  border-bottom: 2px solid rgba(153, 153, 153, 0.5);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+
+  h2 {
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 6px;
+  }
+
+  ul {
+    margin-left: 2rem;
+
+    li {
+      h3 {
+        font-size: 12px;
+        font-weight: bold;
+
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
 // SKILL INFORMATION
 .skill-information {
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
   border-bottom: 2px solid rgba(153, 153, 153, 0.5);
+  margin-bottom: 1rem;
 
   h2 {
     font-size: 13px;
@@ -130,6 +165,8 @@
 
 // EDUCATION INFORMATION
 .education-information {
+  margin-bottom: 1rem;
+
   h2 {
     font-size: 13px;
     font-weight: bold;

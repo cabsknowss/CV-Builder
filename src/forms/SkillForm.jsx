@@ -11,11 +11,11 @@ const SkillInfo = ({ setSkillForm, setForm }) => {
     setInputSkill("");
   };
 
-  const handleSubmitButton = (e) => {
-    if (!skills) return;
+  const handleNextButton = (e) => {
     e.preventDefault();
+    if (skills.length == 0) return;
     setSkillForm(skills);
-    setForm("GeneratePage");
+    setForm("CertificationForm");
   };
   return (
     <div>
@@ -41,12 +41,13 @@ const SkillInfo = ({ setSkillForm, setForm }) => {
             value={inputSkill}
             type="text"
             placeholder="Enter your answer"
+            required
           />
         </div>
       </form>
       <div>
-        <button type="next" onClick={handleSubmitButton}>
-          Submit
+        <button type="next" onClick={handleNextButton}>
+          Next
         </button>
       </div>
     </div>

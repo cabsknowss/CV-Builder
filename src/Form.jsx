@@ -4,15 +4,21 @@ import GeneralForm from "./forms/GeneralForm";
 import EducationForm from "./forms/EducationForm";
 import WorkForm from "./forms/WorkForm";
 import SkillForm from "./forms/SkillForm";
+import ProjectForm from "./forms/ProjectForm";
+import CertificationForm from "./forms/CertificationForm";
+import OrganizationForm from "./forms/OrganizationForm";
 import GeneratePage from "./forms/GeneratePage";
 import ProfessionalCv from "./cv/ProfessionalCv";
 
 const Form = ({ template, setTemplate }) => {
   const [form, setForm] = useState("GeneralForm");
   const [generalForm, setGeneralForm] = useState({});
-  const [educationForm, setEducationForm] = useState([]);
   const [workForm, setWorkForm] = useState([]);
+  const [educationForm, setEducationForm] = useState([]);
+  const [projectForm, setProjectForm] = useState([]);
   const [skillForm, setSkillForm] = useState([]);
+  const [certificationForm, setCertificationForm] = useState([]);
+  const [organizationForm, setOrganizationForm] = useState([]);
 
   const [personalDetails, setPersonalDetails] = useState();
 
@@ -27,6 +33,9 @@ const Form = ({ template, setTemplate }) => {
       education: [...educationForm],
       work: [...workForm],
       skill: [...skillForm],
+      project: [...projectForm],
+      certification: [...certificationForm],
+      organization: [...organizationForm],
     });
   };
 
@@ -62,6 +71,30 @@ const Form = ({ template, setTemplate }) => {
 
             {form === "SkillForm" && (
               <SkillForm setSkillForm={setSkillForm} setForm={setForm} />
+            )}
+
+            {form === "ProjectForm" && (
+              <ProjectForm
+                projectForm={projectForm}
+                setProjectForm={setProjectForm}
+                setForm={setForm}
+              />
+            )}
+
+            {form === "CertificationForm" && (
+              <CertificationForm
+                certificationForm={certificationForm}
+                setCertificationForm={setCertificationForm}
+                setForm={setForm}
+              />
+            )}
+
+            {form === "OrganizationForm" && (
+              <OrganizationForm
+                organizationForm={organizationForm}
+                setOrganizationForm={setOrganizationForm}
+                setForm={setForm}
+              />
             )}
 
             {form === "GeneratePage" && (

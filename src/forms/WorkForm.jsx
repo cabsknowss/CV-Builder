@@ -13,7 +13,7 @@ const WorkForm = ({ workForm, setWorkForm, setForm }) => {
     const newWork = { position, company, startDate, endDate, description };
     setWorkForm([...workForm, newWork]);
 
-    setForm("SkillForm");
+    setForm("ProjectForm");
   };
 
   const handleAddButton = () => {
@@ -32,7 +32,7 @@ const WorkForm = ({ workForm, setWorkForm, setForm }) => {
     <div>
       <div className="form-inputs__title">
         <h3>
-          Experience <span style={{ fontSize: "1rem" }}>({workNum})</span>
+          Experience <span style={{ fontSize: "1rem" }}>[{workNum}]</span>
         </h3>
         <button type="add" onClick={handleAddButton}>
           Add

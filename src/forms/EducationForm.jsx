@@ -32,7 +32,7 @@ const EducationForm = ({ educationForm, setEducationForm, setForm }) => {
     <div>
       <div className="form-inputs__title">
         <h3>
-          Education <span style={{ fontSize: "1rem" }}>({educationNum})</span>
+          Education <span style={{ fontSize: "1rem" }}>[{educationNum}]</span>
         </h3>
         <button type="add" onClick={handleAddButton}>
           Add

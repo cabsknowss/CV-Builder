@@ -61,8 +61,6 @@ const ProfessionalCv = ({ personalDetails }) => {
           </div>
         </section>
 
-        <br />
-
         <section>
           <div className="work-information">
             <h2>Experience</h2>
@@ -85,7 +83,21 @@ const ProfessionalCv = ({ personalDetails }) => {
           </div>
         </section>
 
-        <br />
+        {personalDetails.project.length > 0 && (
+          <section>
+            <div className="project-information">
+              <h2>Project</h2>
+              <ul>
+                {personalDetails.project.map((project, index) => (
+                  <li key={index}>
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         <section>
           <div className="skill-information">
@@ -98,7 +110,40 @@ const ProfessionalCv = ({ personalDetails }) => {
           </div>
         </section>
 
-        <br />
+        {personalDetails.certification.length > 0 && (
+          <section>
+            <div className="certification-information">
+              <h2>Certification</h2>
+              <ul>
+                {personalDetails.certification.map((certification, index) => (
+                  <li key={index}>
+                    <h3>{certification.title}</h3>
+                    <p>{certification.institution}</p>
+                    <p>{certification.dateIssued}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {personalDetails.organization.length > 0 && (
+          <section>
+            <div className="organization-information">
+              <h2>Organization</h2>
+              <ul>
+                {personalDetails.organization.map((organization, index) => (
+                  <li key={index}>
+                    <h3>{organization.organization}</h3>
+                    <p>{organization.position}</p>
+                    <p>{organization.startDate}</p>
+                    <p>{organization.endDate}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         <section>
           <div className="education-information">

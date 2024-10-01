@@ -11,7 +11,8 @@ const OrganizationForm = ({
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
 
-  const handleNextButton = () => {
+  const handleNextButton = (e) => {
+    e.preventDefault();
     if (!organization || !position || !startDate || !endDate) {
       setForm("GeneratePage");
       return;
@@ -73,7 +74,7 @@ const OrganizationForm = ({
           <input
             onChange={(event) => setStartDate(event.target.value)}
             value={startDate}
-            type="text"
+            type="month"
             placeholder="Enter the start date."
           />
         </div>
@@ -83,7 +84,7 @@ const OrganizationForm = ({
           <input
             onChange={(event) => setEndDate(event.target.value)}
             value={endDate}
-            type="text"
+            type="month"
             placeholder="Enter the end date."
           />
         </div>

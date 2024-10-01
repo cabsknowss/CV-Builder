@@ -11,7 +11,7 @@
 
   .cv-page__container {
     width: 800px;
-    padding: 4rem;
+    padding: 3rem;
     height: 100%;
     margin-inline: auto;
     background-color: $clr-neutral-100;
@@ -159,6 +159,94 @@
 
     li {
       font-size: 11px;
+    }
+  }
+}
+
+// CERTIFICATION INFORMATION
+.certification-information {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(153, 153, 153, 0.5);
+  margin-bottom: 1rem;
+
+  h2 {
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 5px;
+  }
+
+  ul {
+    margin-left: 2rem;
+
+    li {
+      margin-bottom: 4px;
+      // display: flex;
+      // justify-content: space-between;
+      // align-items: center;
+
+      .certification-title {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      h3 {
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 10px;
+      }
+
+      .certification-institute {
+        font-size: 11px;
+        font-style: italic;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+// ORGANIZATION INFORMATION
+.organization-information {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(153, 153, 153, 0.5);
+  margin-bottom: 1rem;
+
+  h2 {
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 5px;
+  }
+
+  ul {
+    margin-left: 2rem;
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .organization-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h3 {
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 10px;
+    }
+
+    .organization-institute {
+      font-size: 11px;
+      font-style: italic;
+      font-weight: 400;
     }
   }
 }

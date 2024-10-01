@@ -10,8 +10,8 @@ const ProfessionalCv = ({ personalDetails }) => {
     method: "open",
     resolution: Resolution.HIGH,
     page: {
-      margin: Margin.SMALL,
       format: "letter",
+      margin: Margin.NONE,
     },
   };
   const getTargetElement = () => document.getElementById("content-id");
@@ -117,9 +117,13 @@ const ProfessionalCv = ({ personalDetails }) => {
               <ul>
                 {personalDetails.certification.map((certification, index) => (
                   <li key={index}>
-                    <h3>{certification.title}</h3>
-                    <p>{certification.institution}</p>
-                    <p>{certification.dateIssued}</p>
+                    <div className="certification-title">
+                      <h3>{certification.title}</h3>
+                      <p>Issued {dateFormatter(certification.dateIssued)}</p>
+                    </div>
+                    <p className="certification-institute">
+                      {certification.institution}
+                    </p>
                   </li>
                 ))}
               </ul>
@@ -134,10 +138,16 @@ const ProfessionalCv = ({ personalDetails }) => {
               <ul>
                 {personalDetails.organization.map((organization, index) => (
                   <li key={index}>
-                    <h3>{organization.organization}</h3>
-                    <p>{organization.position}</p>
-                    <p>{organization.startDate}</p>
-                    <p>{organization.endDate}</p>
+                    <div className="organization-title">
+                      <h3>{organization.organization}</h3>
+                      <p>
+                        {dateFormatter(organization.startDate)} -{" "}
+                        {dateFormatter(organization.endDate)}
+                      </p>
+                    </div>
+                    <p className="organization-institute">
+                      {organization.position}
+                    </p>
                   </li>
                 ))}
               </ul>

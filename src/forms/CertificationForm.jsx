@@ -10,13 +10,14 @@ const CertificationForm = ({
   const [institution, setInstitution] = useState("");
   const [dateIssued, setDateIssued] = useState("");
 
-  const handleNextButton = () => {
+  const handleNextButton = (e) => {
+    e.preventDefault();
     if (!title || !institution || !dateIssued) {
       setForm("OrganizationForm");
       return;
     }
 
-    const newCertification = { title, institution, dateIssues };
+    const newCertification = { title, institution, dateIssued };
     setCertificationForm([...certificationForm, newCertification]);
 
     setForm("OrganizationForm");

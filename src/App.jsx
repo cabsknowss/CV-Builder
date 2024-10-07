@@ -6,7 +6,7 @@ const App = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/CV-Builder" element={<Home />}></Route>
           <Route path="/getstarted" element={<GetStarted />}></Route>
         </Routes>
       </Router>

@@ -13,10 +13,6 @@ const GetStarted = () => {
       format: "Professional",
       img: CvExample,
     },
-    {
-      format: "Creative",
-      img: CvExample2,
-    },
   ];
 
   return (

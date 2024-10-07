@@ -36,6 +36,10 @@ const ProfessionalCv = ({ personalDetails }) => {
     return `${months[parseInt(dateSplit[1]) - 1]} ${dateSplit[0]}`;
   };
 
+  const applyLineBreaks = (text) => {
+    return text.replace(/(?:\r\n|\r|\n)/g, "<br />");
+  };
+
   return (
     <div className="cv-page">
       <div className="cv-page__container" id="content-id">
@@ -76,7 +80,9 @@ const ProfessionalCv = ({ personalDetails }) => {
                       {dateFormatter(work.endDate)}
                     </p>
                   </div>
-                  <p>{work.description}</p>
+                  <pre style={{ textWrap: "wrap", whiteSpace: "pre-line" }}>
+                    {work.description}
+                  </pre>
                 </li>
               ))}
             </ul>
@@ -91,7 +97,9 @@ const ProfessionalCv = ({ personalDetails }) => {
                 {personalDetails.project.map((project, index) => (
                   <li key={index}>
                     <h3>{project.title}</h3>
-                    <p>{project.description}</p>
+                    <pre style={{ textWrap: "wrap", whiteSpace: "pre-line" }}>
+                      {project.description}
+                    </pre>
                   </li>
                 ))}
               </ul>

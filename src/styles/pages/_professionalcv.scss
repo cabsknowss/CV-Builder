@@ -29,7 +29,7 @@
   border-bottom: 2px solid rgba(153, 153, 153, 0.5);
 
   h1 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
   }
 
@@ -38,7 +38,7 @@
   }
 
   p {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
@@ -75,26 +75,28 @@
   }
 
   h2 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
 
     margin-bottom: 4px;
   }
 
   h3 {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
 
     margin-bottom: 3px;
 
     span {
+      font-size: 12px;
       font-style: italic;
       font-weight: 400;
     }
   }
 
-  p {
-    font-size: 11px;
+  p,
+  pre {
+    font-size: 12px;
   }
 
   .work-information__date {
@@ -110,7 +112,7 @@
   margin-bottom: 1rem;
 
   h2 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
 
     margin-bottom: 6px;
@@ -120,15 +122,17 @@
     margin-left: 2rem;
 
     li {
-      h3 {
-        font-size: 12px;
-        font-weight: bold;
+      margin-bottom: 6px;
 
-        margin-bottom: 6px;
+      h3 {
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 3px;
       }
 
-      p {
-        font-size: 11px;
+      p,
+      pre {
+        font-size: 12px;
       }
     }
   }
@@ -141,7 +145,7 @@
   margin-bottom: 1rem;
 
   h2 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
 
     margin-bottom: 6px;
@@ -158,7 +162,7 @@
     margin-left: 2rem;
 
     li {
-      font-size: 11px;
+      font-size: 12px;
     }
   }
 }
@@ -170,7 +174,7 @@
   margin-bottom: 1rem;
 
   h2 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
 
     margin-bottom: 5px;
@@ -191,12 +195,12 @@
       }
 
       h3 {
-        font-size: 12px;
+        font-size: 13px;
         font-weight: bold;
       }
 
       p {
-        font-size: 10px;
+        font-size: 11px;
       }
 
       .certification-institute {
@@ -215,7 +219,7 @@
   margin-bottom: 1rem;
 
   h2 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
 
     margin-bottom: 5px;
@@ -235,12 +239,12 @@
     }
 
     h3 {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: bold;
     }
 
     p {
-      font-size: 10px;
+      font-size: 11px;
     }
 
     .organization-institute {
@@ -256,7 +260,7 @@
   margin-bottom: 1rem;
 
   h2 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
 
     margin-bottom: 4px;
@@ -273,12 +277,12 @@
       margin-bottom: 3px;
 
       h3 {
-        font-size: 12px;
+        font-size: 13px;
         font-weight: bold;
       }
 
       .education-information__date {
-        font-size: 10px;
+        font-size: 11px;
         font-weight: bold;
       }
     }

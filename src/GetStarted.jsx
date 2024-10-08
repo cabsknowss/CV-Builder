@@ -34,7 +34,10 @@ const GetStarted = () => {
         </section>
       </div>
 
-      <div onClick={() => navigate("/")} className="getstarted-page__backbtn">
+      <div
+        onClick={() => navigate("/CV-Builder")}
+        className="getstarted-page__backbtn"
+      >
         <ArrowBack />
       </div>
 
